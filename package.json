@@ -1,0 +1,19 @@
+{
+  "name": "dragonstack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently --kill-others \"npm run backend\" \"npm run frontend\"",
+    "backend": "nodemon backend/bin/server",
+    "frontend": "parcel frontend/src/index.html",
+    "clean": "rm -rf dist .cache",
+    "dev": "npm run clean && npm run start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^5.2.0"
+  }
+}
